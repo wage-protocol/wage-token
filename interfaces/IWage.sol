@@ -1,6 +1,8 @@
 pragma solidity ^0.6.0;
 
-interface IWage {
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+interface IWage is IERC20 {
     
     /**
     * @dev Event emitted when enabling transfers

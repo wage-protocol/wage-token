@@ -240,7 +240,7 @@ contract Wage is IWage, ERC20, AuthorizedAccess {
      * @param who The address to query.
      * @return The balance of the specified address.
      */
-    function balanceOf(address who) public view override returns (uint256) {
+    function balanceOf(address who) public view override(ERC20, IERC20) returns (uint256) {
         return _balances[who].div(_gonsPerFragment);
     }
 }
